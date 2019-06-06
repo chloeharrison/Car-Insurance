@@ -1,0 +1,562 @@
+/* The overall look of the website */
+
+body {
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+
+/* Global */
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+/* Button */
+
+.button_1 {
+    height: 38px;
+    background: #e8491d;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+/* When you hover over the button */
+
+.button_1:hover {
+    background: #EE7600;
+    color: #fff;
+}
+
+
+/* When website opens this hides the form*/
+
+.initiallyHidden {
+    display: none;
+}
+
+
+/* Header **/
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+}
+
+
+/* Paragraphs in the header**/
+
+header p {
+    float: right;
+    color: #e8491d;
+    margin: 0;
+}
+
+
+/* Logo **/
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header .highlight,
+header .current a {
+    color: #e8491d;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #cccccc;
+    font-weight: bold;
+}
+
+
+/* Header Navigation **/
+
+header nav {
+    float: right;
+    margin-top: 7px;
+    text-decoration: none;
+}
+
+header nav ul {
+    overflow: hidden;
+    color: #fff;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    transition: max-height 0.5s;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 5px;
+}
+
+header nav li {
+    padding: 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header nav ul li:hover {
+    background-color: #e8491d;
+}
+
+
+/* The button that appears when the screen size is 580px **/
+
+.menu-icon {
+    width: 100%;
+    background: #e8491d;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 15px 10px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+
+
+/* hero section */
+
+#hero {
+    min-height: 400px;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/1.jpg') no-repeat 0;
+    /* Shows images and adds a darken gradient over the image so that the text can be seen better **/
+    text-align: center;
+    color: #ffffff;
+    background-size: cover;
+}
+
+#hero h1 {
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 20px;
+}
+
+
+/* quote section */
+
+#quote {
+    padding: 15px;
+    color: #ffffff;
+    background: #35424a;
+}
+
+#quote h1 {
+    text-align: center;
+}
+
+#quote h2 {
+    text-align: center;
+}
+
+#quote p {
+    text-align: center;
+}
+
+
+/* What insurance we offer and frequently asked questions section*/
+
+.boxes {
+    margin-top: 20px;
+}
+
+.boxes h1 {
+    border-bottom: #e8491d 3px solid;
+    text-align: center;
+    font-size: 40px;
+    padding: 10px 0;
+    margin: 0 0 15px;
+}
+
+.boxes p {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+
+/*footer*/
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #e8491d;
+    text-align: center;
+    position: relative;
+}
+
+
+/*Scroll top button*/
+
+#scroll {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: #e8491d;
+    text-indent: -9999px;
+    display: none;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px
+}
+
+#scroll span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -12px;
+    height: 0;
+    width: 0;
+    border: 8px solid transparent;
+    border-bottom-color: #ffffff;
+}
+
+#scroll:hover {
+    background-color: #EE7600;
+    opacity: 1;
+}
+
+
+/*Cookies*/
+
+.storage {
+    background-color: #35424a;
+    border-bottom: #35424a 3px solid;
+    width: 100%;
+    padding: 40px;
+}
+
+.show_cookie {
+    color: #fff;
+    padding: 40px;
+}
+
+.stor_btn {
+    height: 38px;
+    background: #e8491d;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+}
+
+
+/* Forms */
+
+.myForm {
+    width: 100%;
+    padding: 20px;
+    margin-top: 30px;
+    display: block;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    display: block;
+    margin-top: 30px;
+}
+
+
+/* Where the dropdown is */
+
+.user-box {
+    margin-top: 30px;
+}
+
+select {
+    margin: 50px;
+    width: 170px;
+    padding: 5px 35px 5px 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    height: 34px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(http://i62.tinypic.com/2e3ybe1.jpg) 96% / 15% no-repeat #eee;
+    display: block;
+    text-align: center;
+}
+
+
+/* Text Boxes */
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+/*input[id="email"] { width: 49% !important; }*/
+
+input[type="text"] {
+    width: 100%;
+    float: left;
+    padding: 8px 10px;
+    margin-right: 2%;
+    margin-bottom: 25px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    transition: 0.1s ease-in-out;
+    -moz-transition: 0.1s ease-in-out;
+    -webkit-transition: 0.1s ease-in-out;
+    -o-transition: 0.1s ease-in-out;
+    text-align: center;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 8px 10px;
+    margin-right: 2%;
+    margin-bottom: 25px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    transition: 0.1s ease-in-out;
+    -moz-transition: 0.1s ease-in-out;
+    -webkit-transition: 0.1s ease-in-out;
+    -o-transition: 0.1s ease-in-out;
+    text-align: center;
+}
+
+input[type="text"]:focus {
+    border: 1px solid #4b8fdd;
+    background: #cce4ff;
+    text-align: center;
+}
+
+input[type="email"]:focus {
+    border: 1px solid #4b8fdd;
+    background: #cce4ff;
+    text-align: center;
+}
+
+
+/* Submit Button */
+
+.submit {
+    width: 49%;
+    height: 38px;
+    background: #e8491d;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    margin: 0 auto;
+    float: right;
+}
+
+.submit:hover {
+    background: #EE7600;
+    color: #fff;
+}
+
+
+/* Reset Button */
+
+.reset {
+    width: 49%;
+    height: 38px;
+    background: #e8491d;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    margin: 0 auto;
+    float: left;
+}
+
+.reset:hover {
+    background: #EE7600;
+    color: #fff;
+}
+
+
+/*Form Animation */
+
+.show {
+    visibility: visible;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* ToolTips */
+
+.tooltip {
+    position: relative;
+    padding: 5px 0 0;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    font-size: 14px;
+    width: 220px;
+    background: #e8491d;
+    border-left: 10px solid #e8491d;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 7px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 45%;
+    margin-left: -110px;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+}
+
+span.add-tip {
+    left: 48% !important;
+}
+
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #e8491d transparent transparent transparent;
+}
+
+
+/* Validation Styles */
+
+.error {
+    background: #FF9494 !important;
+}
+
+.show-tip {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* For the images in the tabs section */
+
+img {
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+}
+
+
+/* To wrap the text around the images in the other types of insurance section */
+
+img.wrap {
+    float: right;
+    margin-left: 20px;
+}
+
+
+/* Media Queries */
+
+@media(max-width: 1000px) {
+    header #branding,
+    header nav,
+    header nav li,
+    header nav p,
+    #quote h2,
+    #quote form,
+    .boxes .box,
+    img.wrap {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    header {
+        padding-bottom: 20px;
+    }
+    #hero h1 {
+        margin-top: 40px;
+    }
+    @media (max-width: 580px) {
+        header nav ul {
+            max-height: 0px;
+        }
+        .showing {
+            max-height: 20em;
+        }
+        header nav ul li {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 15px;
+            text-align: left;
+        }
+        .menu-icon {
+            display: block;
+        }
+    }
+ }

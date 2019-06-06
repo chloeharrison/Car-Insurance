@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- ==== Start of html ==== -->
+    <head>
+        <!-- ==== Start of head ==== -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="Saving your quote">
+        <meta name="keywords" content="Retrive your quote">
+        <meta name="author" content="Chloe Harrison">
+        <title>One Quote Northern Ireland </title>
+        <!-- ==== All the stylesheets  ==== -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/jqueryui.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <!-- ==== All the stylesheets  ==== -->
+    </head>
+    <!-- ==== End of head  ==== -->
+    <body onLoad="date_time();">
+        <!-- ==== Start of body which as an onload for the date and time to appear  ==== -->
+        <header>
+            <div class="container">
+                <!-- ==== The start of container for the header  ==== -->
+                <div id="branding">
+                    <!-- ==== The start div for the logo  ==== -->
+                    <h1><span class="highlight">One Quote</span> Northern Ireland </h1>
+                </div>
+                <!-- ==== The end div for the logo  ==== -->
+                <nav>
+                    <!-- ==== Start of the navigation  ==== -->
+                    <div class="menu-icon">
+                        <!-- ==== Menu icon that appears when size of screen is at 580px  ==== -->
+                        Menu
+                    </div>
+                    <!-- ==== End of Menu icon that appears when size of screen is at 580px  ==== -->
+                    <ul>
+                        <li class="current"><a href="#">Home</a></li>
+                        <!-- ==== Link that takes you back to the home page  ==== -->
+                        <li><a href="#quote">Retrive Your Quote</a></li>
+                        <!-- ==== Link that takes you to the quote section of the website  ==== -->
+                        <li><a href="#types">Types Of Insurance</a></li>
+                        <!-- ==== Link that takes you to the types of insurance section of the website   ==== -->
+                        <li><a href="#f&q">Frequently Asked Questions</a></li>
+                        <!-- ==== Link that takes you to the frequently asked questions section of the website  ==== -->
+                    </ul>
+                </nav>
+                <!-- ==== End of the navigation  ==== -->
+            </div>
+            <a href="#" id="scroll" style="display: none;"><span></span></a><!-- ==== Button that appears when scrolling through website which takes you back to the top of the website  ==== -->
+        </header>
+        <!-- ==== End of header ==== -->
+        <section id="hero">
+            <!-- ==== Start of hero section which is the image  ==== -->
+            <div class="container">
+                <!-- ==== The start of container for the hero section  ==== -->
+                <h1>Affordable Car Insurance</h1>
+                <p>For Car Insurance Without a Fuss</p>
+            </div>
+            <!-- ==== The end of container for the hero section  ==== -->
+        </section>
+        <!-- ==== End of hero section which is the image  ==== -->
+        <section id="quote">
+            <!-- ==== Start of retrive you quote section  ==== -->
+            <div class="container">
+                <!-- ==== The start of container for quote section  ==== -->
+                <h1>Retrive Your Quote</h1>
+                <p>No need to hunt down that slip of paper, email or print-out. Here, you can retrieve any insurance quote we’ve prepared for you — quickly, easily and instantly.</p>
+                <button type="button" class="button_1" id="formButton">Click Here to Retrive our Quote</button><!-- ==== Button which makes form appear  ==== -->
+                <!-- ==== Start of form which appears initially Hidden until button is pressed ==== -->
+                <!-- ==== Start of first form which displays the users ==== -->
+                <form id="form1" class="initiallyHidden " name="myForms" >
+                    <h2>Select Your Profile Here:</h2>
+                    <div  class="user-box">
+                        <!-- ==== The start of userbox div ==== -->
+                        <select id="profiles" onchange="clear()">
+                            <!-- ==== start of finds the users in the json file using a dropdown ==== -->
+                            <option>Select a Profile</option>
+                            <!-- ==== Users from the json file will dropdown here ==== -->
+                        </select>
+                        <!-- ====  end of finds the users in the json file using a dropdown  ==== -->
+                    </div>
+                    <!-- ==== The end of userbox div  ==== -->
+                    <!-- ==== End of first form which displays the users ==== -->
+                    <!-- ==== Start of second form which displays the users and car information ==== -->
+                    <fieldset>
+                        <!-- ==== Start of first section of the second form which displays the users information ==== -->
+                        <h2>User Information</h2>
+                        <!-- ==== Title of first section of the form ==== -->
+                        <label for="name">Name <span>*</span></label>
+                        <div class="tooltip">
+                            <!-- ==== Start of tooltip ==== -->
+                            <span class="tooltiptext valid-name">Must be over 3 Characters</span><!-- ==== To display the tooltip ==== -->
+                            <input class="clearType" id="name" name="names" type="text" placeholder="Forename" required>
+                        </div>
+                        <!-- ==== end of tooltip ==== -->
+                        <!-- ==== End of Name part of form ==== -->
+                        <!-- ==== Start of Surname part of form ==== -->
+                        <label for="surName">Surname<span>*</span></label>
+                        <div class="tooltip">
+                            <!-- ==== Start of tooltip ==== -->
+                            <span class="tooltiptext valid-surName">Must be over 3 Characters</span><!-- ==== To display the tooltip ==== -->
+                            <input class="last valid-surName clearType" id="surName" name="surNames" type="text" placeholder="Surname" required>
+                        </div>
+                        <!-- ==== end of tooltip ==== -->
+                        <!-- ==== End of Surname part of form ==== -->
+                        <!-- ==== Start of email part of form ==== -->
+                        <label for="email">Email <span>*</span></label>
+                        <div class="tooltip">
+                            <!-- ==== Start of tooltip ==== -->
+                            <span class="tooltiptext valid-email">Please use the correct format</span><!-- ====To display the tooltip ====-->
+                            <input class="clearType" id="email" name="emails" type="email" placeholder="Your_Email@email.com" required>
+                        </div>
+                        <!-- ==== end of tooltip ==== -->
+                        <!-- ==== Start of email part of form ==== -->
+                        <!-- ==== Start of address part of form ==== -->
+                        <label for="address">Address <span>*</span></label>
+                        <div class="tooltip">
+                            <!-- ==== Start of tooltip ==== -->
+                            <span class="tooltiptext address valid-address add-tip">Must be over 8 Characters</span><!-- ==== To display the tooltip ==== -->
+                            <input class=" clearType" id="address" name="addresses" type="text" placeholder="10 Downing Street" required>
+                        </div>
+                        <!-- ==== end of tooltip ==== -->
+                        <!-- ==== End of Address part of form ==== -->
+                        <!-- ==== Start of Postcode part of form ==== -->
+                        <label for="postcode">Postcode <span>*</span></label>
+                        <div class="tooltip">
+                            <!-- ==== Start of tooltip ==== -->
+                            <span class="tooltiptext valid-postcode">Must be 6 or 7 characters</span><!-- ==== To display the tooltip ==== -->
+                            <input class="clearType" type="text" id="postcode" name="postcodes" placeholder="BT4 XXX" required>
+                        </div>
+                        <!-- ==== end of tooltip ==== -->
+                        <!-- ==== End of Postcode part of form ==== -->
+                        <!-- ==== Start of county part of form ==== -->
+                        <label for="county">County</label>
+                        <div class="tooltip">
+                            <!-- ==== Start of tooltip ==== -->
+                            <span class="tooltiptext"></span><!-- ==== To display the tooltip ==== -->
+                            <input class="last clearType" id="county" name="counties" type="text" placeholder="Antrim">
+                        </div>
+                        <!-- ==== end of tooltip ==== -->
+                        <!-- ==== End of county part of form ==== -->
+                    </fieldset>
+                    <!--==== End of first section of the second form which displays the users information ==== -->
+                    <fieldset>
+                        <!-- ==== Start of second section of the second form which displays the car information ==== -->
+                        <h2>About your Car</h2>
+                        <!-- ==== Title of second section of the form ==== -->
+                        <!-- ==== Start of vehicle model part of form ==== -->
+                        <label for="vehicle">Vehicle Model <span>*</span></label>
+                        <div class="tooltip">
+                            <!-- ==== Start of tooltip ==== -->
+                            <span class="tooltiptext valid-vehicle">Please enter your Vehicle Model</span><!-- ==== To display the tooltip ==== -->
+                            <input class="clearType" type="text" id="vehicle" name="vehicles" placeholder="Ford Ka" required>
+                        </div>
+                        <!-- ==== end of tooltip ==== -->
+                        <!-- ==== End of vehicle model part of form ==== -->
+                        <!-- ==== Start of registeration number part of form  ==== -->
+                        <label for="regNumber">Registration Number <span>*</span></label>
+                        <div class="tooltip">
+                            <!--==== Start of tooltip ==== -->
+                            <span class="tooltiptext valid-reg">Too many characters (Max 8)</span><!-- ==== To display the tooltip ==== -->
+                            <input class="last clearType" id="regNumber" name="regNumbers" type="text" placeholder="MEZ 000" required>
+                        </div>
+                        <!-- ==== end of tooltip ==== -->
+                        <!-- ==== End of registeration number part of form ==== -->
+                        <!-- ==== Start of current Insurance part of form ==== -->
+                        <label for="currentInsurance">Current Insurance (£)</label>
+                        <div class="tooltip">
+                            <!-- ==== Start of tooltip ==== -->
+                            <span class="tooltiptext valid-insurance">Enter your Current Insurance</span><!-- ==== To display the tooltip ==== -->
+                            <input class="clearType" type="text" id="currentInsurance" name="insurances" placeholder="£500.00">
+                        </div>
+                        <!-- ==== end of tooltip ==== -->
+                        <!-- ==== End of current Insurance part of form ==== -->
+                        <!-- ==== Start of date purchased part of form ==== -->
+                        <label for="datepicker">Date Purchased <span>*</span></label>
+                        <div class="tooltip">
+                            <!--==== Start of tooltip ==== -->
+                            <span class="tooltiptext valid-date">Please enter the Date Purchased</span><!-- ==== To display the tooltip ==== -->
+                            <input class="clearType" type="text" name="years" id="datepicker" placeholder="DD/MM/YYYY" required><!-- ==== jQuery UI date picker will appear ==== -->
+                        </div>
+                        <!-- ==== end of tooltip ==== -->
+                        <!-- ==== End of date purchased part of form ==== -->
+                    </fieldset>
+                    <!-- ==== End of second section of the second form which displays the car information ==== -->
+                    <!-- ==== Button to reset  ==== -->
+                    <div class="section">
+                        <input class="reset" type="button" onclick="reset()" value="Clear Form">
+                    </div>
+                    <!-- ==== Button to reset  ==== -->
+                    <!-- ==== Button to submit  ==== -->
+                    <div class="section last">
+                        <input class="submit" type="submit" name="submit"  value="Save">
+                    </div>
+                    <!-- ==== Button to submit ==== -->
+                </form>
+                <!-- ==== End of form  ==== -->
+            </div>
+            <!-- ==== The end of container for quote section  ==== -->
+        </section>
+        <!-- ==== End of retrive you quote section  ==== -->
+        <section id="types" class="boxes">
+            <!-- ==== The start of section for types of insurance section  ==== -->
+            <div class="container">
+                <!--==== Start of container for types of insurance section ==== -->
+                <h1>Other Types Of Insurance</h1>
+                <p>Have a look at our other tyes of car insurance to see which insurance type is right for you.</p>
+                <div id="tabs">
+                    <!-- ==== Start of the tabs jQuery UI  ==== -->
+                    <!-- ==== Start of the tabs list  ==== -->
+                    <ul>
+                        <li><a href="#tabs-1">Learner Drivers</a></li>
+                        <li><a href="#tabs-2">Single Car</a></li>
+                        <li><a href="#tabs-3">Multi-Car</a></li>
+                        <li><a href="#tabs-4">Car Warranty</a></li>
+                        <li><a href="#tabs-5">Black Box</a></li>
+                        <li><a href="#tabs-6">Multi-Cover</a></li>
+                    </ul>
+                    <!-- ==== End of the tabs list  ==== -->
+                    <!-- ==== Start of the first tab (Learner Drivers)  ==== -->
+                    <div id="tabs-1">
+                        <img class="wrap" alt="Car with L plate" src="images/2.jpg">
+                        <h2>What is Learner Drivers Insurance?</h2>
+                        <p>When you're learning to drive it's important to get as much experience behind the wheel as you possibly can. Driving lessons with an instructor are the best way to get plenty of hands-on experience but they can be costly and it's often a case of one-per-week.Lots of people choose to be added to a parent's or family member's policy to get some extra practice between official lessons.</p>
+                        <p>The insurance works in addition to any cover already in place on the car and you can choose instant cover from two hours to 90 days.As a learner driver, you would need to be accompanied by a full licence holder aged 21 or over who has held their full UK licence for three years or longer at all times and the cover finishes as soon as the hard part's done and you've passed your test.</p>
+                    </div>
+                    <!-- ==== End of the first tab (Learner Drivers)  ==== -->
+                    <!-- ==== Start of the second tab (Single Car)  ==== -->
+                    <div id="tabs-2">
+                        <img class="wrap" alt="One car" src="images/3.jpg">
+                        <h2>What is Single Car Insurance?</h2>
+                        <p>Car insurance can pay out if your car is stolen, vandalised, catches on fire or if you are involved in an accident. It also protects you against any damage you cause to the public, their property or other road users.You only need to claim on your policy when an accident is your fault. If another driver is to blame their insurance should pay instead. There are three levels of car insurance, these are:                        </p>
+                        <ul>
+                            <li>	<b>Fully comprehensive</b></li>
+                            <li><b>Third party</b></li>
+                            <li><b>fire and theft</b></li>
+                        </ul>
+                    </div>
+                    <!-- ==== End of the second tab (Single Car)  ==== -->
+                    <!-- ==== Start of the third tab (Multi-Car)  ==== -->
+                    <div id="tabs-3">
+                        <img class="wrap" alt="Multiple cars" src="images/4.jpg">
+                        <h2>What is Multi Car Insurance?</h2>
+                        <p>Multi car insurance is designed for households with more than one car, and you can usually cover up to a maximum of five cars on one policy. You can think of it as a family car insurance policy, where each additional vehicle on the policy earns a further multi car discount from the insurer. While some insurers will only cover cars registered to the same address, the best multi car insurance policies will also allow you to cover cars driven by your immediate family, even if they live elsewhere.</p>
+                    </div>
+                    <!-- ==== End of the third tab (Multi-Car)  ==== -->
+                    <!-- ==== Start of the fourth tab (Car warranty)  ==== -->
+                    <div id="tabs-4">
+                        <img class="wrap" alt="Fixing car" src="images/5.jpg">
+                        <h2>What is Car Warranty Insurance?</h2>
+                        <p>A car warranty (also called mechanical breakdown insurance) is a type of insurance policy that protects you from the cost of fixing certain mechanical problems and electrical faults. At their most simplistic, car warranty policies will cover basic issues to do with the engine and transmission system.</p>
+                    </div>
+                    <!-- ==== Start of the fourth tab (Car Warranty)  ==== -->
+                    <!-- ==== Start of the fifth tab (Black Box Insurance)  ==== -->
+                    <div id="tabs-5">
+                        <img class="wrap" alt="Black ox for car" src="images/6.jpg">
+                        <h2>What is Black Box Insurance?</h2>
+                        <p>If you are a young driver or you’ve recently passed your test, you could be facing an eye-watering quote for your car insurance.Black box insurance works when your car is fitted with a small ‘black box’ device, about the size of a smartphone, which records speed, distance travelled and the time of day or night that you are on the road.The device also assesses your driving style by monitoring braking and cornering. It will also record the types of road on which you typically travel, and the times of day and night you tend to drive, to build up a comprehensive profile of you as a driver.</p>
+                    </div>
+                    <!-- ==== End of the fifth tab (Black Box Insurance)  ==== -->
+                    <!-- ==== Start of the sixth tab (multi-car)  ==== -->
+                    <div id="tabs-6">
+                        <img class="wrap" alt="Multiple Cars" src="images/7.jpg">
+                        <h2>What is Multi-Cover Insurance?</h2>
+                        <p>Multi-car insurance policies are designed for people who have more than one car in the family.Instead of having to keep track of different policies and renewal dates for different cars, a multi-car policy bundles all the policies with one insurer so they’re held together separately or combined into a single policy that renews at the same time.</p>
+                    </div>
+                    <!-- ==== End of the sixth tab (Multi-Cover)  ==== -->
+                </div>
+                <!-- ==== End of the tabs jQuery UI  ==== -->
+            </div>
+            <!-- ==== The end of container for types of insurance section  ==== -->
+        </section>
+        <!-- ==== The end of section for types of insurance section  ==== -->
+        <!-- ==== frequently asked questions section ==== -->
+        <section id="f&q" class="boxes">
+            <!-- ==== The start of section for frequently asked questions section  ==== -->
+            <div class="container">
+                <!-- ==== The start of container for frequently asked questions section  ==== -->
+                <h1>Frequently Asked Questions</h1>
+                <p>Have a look at our other tyes of car insurance to see which insurance type is right for you.</p>
+                <div  id="accordion">
+                    <!-- ==== The Start of the accrodion jQuery UI  ==== -->
+                    <h3 >How long is my quote valid for?</h3>
+                    <!-- ==== Start of the First section of the accrodion jQuery UI function  ==== -->
+                    <div>
+                        <p>
+                            When you compare policies with us, any quotes you get offered will be valid until the date you chose for your policy to beginning at the beginning of the process.
+                        </p>
+                    </div>
+                    <!-- ==== End of the First section of the accrodion  jQuery UI function  ==== -->
+                    <h3>How long will my policy last?</h3>
+                    <!-- ==== Start of the Second section of the accrodion  jQuery UI function  ==== -->
+                    <div>
+                        <p>
+                            Policies last for a year, if you want cover for a shorter amount of time, you’ll want to opt for a temporary or short term policy.
+                        </p>
+                    </div>
+                    <!-- ==== End of the Second section of the accrodion  jQuery UI function  ==== -->
+                    <h3>Why is my policy so expensive?</h3>
+                    <!-- ==== Start of the third section of the accrodion  jQuery UI function  ==== -->
+                    <div>
+                        <p>
+                            There are various things that can affect the cost of your policy, making it more expensive.This could be: 
+                        </p>
+                        <ul>
+                            <li>Age</li>
+                            <li>Your Address</li>
+                            <li>Amount of driving experience</li>
+                            <li>Previous Convictions</li>
+                            <li>Value of Car</li>
+                        </ul>
+                    </div>
+                    <!-- ==== End of the third section of the accrodion jQuery UI function  ==== -->
+                    <h3>I crashed my car, what should I do?</h3>
+                    <!-- ==== Start of the fouth section of the accrodion  jQuery UI function  ==== -->
+                    <div>
+                        <p>
+                            If you’ve had a crash, you’ll need to make a claim. You’ll need to get in touch with both the police and your insurance company and inform them as fully as possible as to what happened.
+                        </p>
+                        <p>
+                            Your insurance company will give you a form to fill out that you should return to them along with any photos you can take of any damage caused.
+                        </p>
+                    </div>
+                    <!-- ==== End of the Fourth section of the accrodion  jQuery UI function  ==== -->
+                    <h3 >Do penalty points affect insurance?</h3>
+                    <!-- ==== Start of the Fifth section of the accrodion jQuery UI function  ==== -->
+                    <div>
+                        <p>
+                            If you do have penalty points on your driving licence, then there will be consequences for your car insurance. When taking out a new policy, it’s important to be honest with the insurer. You can expect your insurance premium to increase, and you may have to renew your insurance if you receive points while already covered. Some insurers also charge more for covering drivers convicted of specific offences, for example speeding or drink driving.
+                        </p>
+                    </div>
+                    <!-- ==== End of the Fifth section of the accrodion  jQuery UI function  ==== -->
+                    <h3>What is a no-claims bonus?</h3>
+                    <!-- ==== Start of the Sixth section of the accrodion  jQuery UI function  ==== -->
+                    <div>
+                        <p>
+                            A no-claims bonus (NCB), sometimes called a no-claims discount, is a car insurance discount recognised by insurance providers. It's a count of the number of years you haven't made a claim on your car insurance policy.So for every year you drive without making a claim on your policy, you gain a no-claims bonus.
+                        </p>
+                    </div>
+                    <!-- ==== End of the Sixth section of the accrodion  jQuery UI function  ==== -->
+                    <h3>What is legal cover and why would I need it?</h3>
+                    <!--==== Start of the seventh section of the accrodion  jQuery UI function  ==== -->
+                    <div>
+                        <p>
+                            Legal expenses cover (LEC) generally covers you for matters not dealt with on your car insurance policy in the event of a non-fault claim.Examples are:
+                        </p>
+                        <ul>
+                            <li>Reclaiming your excess from the responsible party if you have a comprehensive policy.</li>
+                            <li>Reclaiming the vehicle damage if you have a third party policy. </li>
+                            <li>Dealing with compensation for any injury sustained in a motor accident, and any hire car costs (within reason) that you may have incurred. </li>
+                        </ul>
+                    </div>
+                    <!-- ==== End of the seventh section of the accrodion jQuery UI function  ==== -->
+                    <h3>What type of licenses do you accept?</h3>
+                    <!-- ==== Start of the eighth section of the accrodion  jQuery UI function  ==== -->
+                    <div>
+                        <p>
+                            There are 4 licenses that we accept:
+                        </p>
+                        <ul>
+                            <li>UK Full Driving License</li>
+                            <li>UK Provisional Driving License </li>
+                            <li>EEC Full Driving License  </li>
+                            <li>Non EEC Full Driving License (From certain Countries) </li>
+                        </ul>
+                    </div>
+                    <!-- ==== End of the eighth section of the accrodion  jQuery UI function  ==== -->
+                </div>
+                <!-- ==== the end of the accrodion jQuery UI  ==== -->
+            </div>
+            <!-- ==== the end of container for frequently asked questions section  ==== -->
+        </section>
+        <!-- ==== the end of section for frequently asked questions section  ==== -->
+        <!-- ==== Footer ==== -->
+        <footer>
+            <!-- ==== start of the footer ====  -->
+            <div class="container">
+                <!-- ==== the start of container for footer ==== -->
+                <p>Insure Your Car Insurance, Copyright &copy; 2018</p>
+                <p id="date"></p>
+                <!-- ==== to display the Day, Date and Time   ==== -->
+            </div>
+            <!-- ==== the end of container for footer ==== -->
+        </footer>
+        <!-- ==== end of the footer ==== -->
+        <!-- ====  for the cookies to appear ==== -->
+        <div class= "storage">
+            <!-- ==== div for the local storage function ==== -->
+            <span class="show_cookie"> This website uses cookies to save your Car Insurance Quote. By using this website you are giving your consent to our use of cookies in accordance with the terms of our cookie policy.</span><!-- ====  text that appears explains the cookies  ==== -->
+            <button type="button" class="stor_btn" name="button">I accept</button><!-- ====  button for the user to accept the cookies ==== -->
+        </div>
+        <!-- ====  end of div for the local storage function ====  -->
+        <!-- ==== scripts ==== -->
+        <!-- ==== scripts hosted online   ==== -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <!-- ==== if online scripts don't work they are stored locally here   ==== -->
+        <script src="scripts/jquery-3.3.1.min.js"></script><!-- ==== jQuery   ==== -->
+        <script src ="scripts/jquery-ui.min.js"></script><!-- ====  jQuery UI  ==== -->
+        <!--==== own scripts    ==== -->
+        <script src="scripts/main.js"></script> <!-- ==== for all the jQuery   ==== -->
+        <script src="scripts/user-info.js"></script><!-- ==== for the Ajax and the json    ==== -->
+    </body>
+    <!-- ==== end of body  ==== -->
+</html>
+<!-- ==== end of html  ==== -->

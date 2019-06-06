@@ -1,0 +1,126 @@
+/*accordion */
+
+#accordion {
+    width: 600px;
+    margin: 20px auto;
+}
+
+
+/*For the different content inside the sections of the accrodion*/
+
+#accordion .ui-accordion-content {
+    background-color: #f3f3f3;
+    width: 556px;
+    color: #777;
+    font-size: 0.875em;
+    line-height: 1;
+}
+
+#accordion .ui-accordion-content>* {
+    margin: 0;
+    padding: 20px;
+}
+
+
+/*For the different sections of the accrodion*/
+
+#accordion .ui-accordion-header {
+    background-color: #e8491d;
+    color: white;
+    line-height: 2.625;
+    display: block;
+    font-size: 0.8125em;
+    width: 100%;
+    text-indent: 10px;
+}
+
+
+/* datepicker */
+
+#ui-datepicker-div {
+    width: 300px;
+    padding: 5px;
+    background: #EE7600;
+    /*Changes Background of datepicker*/
+    display: none;
+}
+
+
+/*------Tabs------------*/
+
+.ui-tabs-nav {
+    background-color: #f4f4f4 !important;
+    /*To overwrite jquery-ui.css*/
+    height: 30px;
+    /*To stop nav block scaling of tab size*/
+    border: none;
+    margin: 0;
+    text-align: center;
+}
+
+#tabs .ui-tabs-active a {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #EE7600;
+    /*Changes Background when tab is active*/
+    border: none;
+    border-radius: 1px 1px 1px 1px;
+    /*To affect only corners*/
+    position: relative;
+    z-index: 5;
+    color: white !important;
+    /*To overwrite jquery-ui.css*/
+    text-decoration: none !important;
+    /*To overwrite jquery-ui.css*/
+}
+
+.ui-tabs .ui-tabs-nav li {
+    position: relative;
+    /*To overwrite jquery-ui.css*/
+    top: -10px !important;
+    /*To overwrite jquery-ui.css*/
+    border: none;
+    margin: 0 0 -5px 0;
+    background: none;
+}
+
+.ui-tabs-anchor {
+    color: #e8491d !important;
+    /*To overwrite jquery-ui.css*/
+    text-decoration: none !important;
+    /*To overwrite jquery-ui.css*/
+    border: none;
+}
+
+
+/*For the tabs to have no borders*/
+
+#tabs .ui-widget {
+    background: #f4f4f4;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#tabs.ui-widget-content {
+    background: #f4f4f4;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#tabs.ui-widget-li {
+    background: #f4f4f4;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#tabs .ui-widget-header {
+    background: #f4f4f4;
+    border: none;
+    padding: 0px;
+    margin: 10px;
+}
