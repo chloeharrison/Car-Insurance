@@ -1,4 +1,4 @@
-# Car-Insurance#
+# Car-Insurance
 This project
 
-#Technologies used#
+#Technologies used
